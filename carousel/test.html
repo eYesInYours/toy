@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图测试</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        /* #slideShow{
+            margin-top:40px;
+            height:330px;
+            width:1400px;
+            border:1px solid pink;
+        } */
+        #slideShow .container{
+            width:640px;
+            height:330px;
+            background-color:lightblue;
+            position:relative;
+            left:340px;
+            overflow:hidden;
+        }
+        #slideShow .container #photoWall{
+            position:absolute;
+            background-color:pink;
+            width:3880px;
+            height:340px;
+        }
+        #slideShow .container #photoWall img{
+            width:640px;
+            height:330px;
+            float:left;
+        }
+
+        #slideShow .container #btn{
+            position:absolute;
+            top:135px;
+
+        }
+        /* #slideShow .container #btn div:hover{
+            background-color:black;
+            opacity:0.2;
+        } */
+        #slideShow .container #btn img{
+            position:relative;
+        }
+        #slideShow .container #pointNav{
+            width:50px;
+            height:6px;
+            position:absolute;
+            top: 290px;
+            left:300px;
+            /* background-color:blue; */
+        }
+        #slideShow .container #pointNav div{
+            margin:0 2px;
+            float:left;
+            width: 6px;
+            height:6px;
+            border-radius:4px;
+            background-color:white;
+            transition:width .3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="slideShow">
+        <div class="container">
+            <div id="photoWall" style="left:-640px">
+                <img src="images/banner4.jpg" alt="">
+                <img src="images/banner.jpg" alt="">
+                <img src="images/banner2.jpg" alt="">
+                <img src="images/banner3.jpg" alt="">
+                <img src="images/banner4.jpg" alt="">
+                <img src="images/banner.jpg" alt="">
+            </div>
+            <div id="btn" style="width:640px;height:69px">
+                <div style="width:41.5px;height:69px;overflow:hidden;float:left;">
+                    <img src="images/arrowhead.png" alt="" style="left:-84px;">
+                </div>
+                <div style="width:41.5px;height:69px;overflow:hidden;float:right;">
+                    <img src="images/arrowhead.png" alt="" style="left:-126px;">
+                </div>      
+            </div>
+            <!-- 圆点导航 -->
+            <div id="pointNav">
+                <div style="width:10px"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/slideShow2.js"></script>
+</body>
+</html>
