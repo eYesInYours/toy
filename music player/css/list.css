@@ -1,0 +1,40 @@
+.myUl{
+    margin:100px auto;
+    width:178px;
+    height:56px;
+    overflow:auto;
+    /* 滚动条左向 */
+    direction: rtl; 
+    padding:0;
+    margin:0;
+    display:none;
+    z-index:-10;
+}
+.myLi{
+    height:8px;
+    line-height:2px;
+    font-size:4px;
+    text-align:center;
+    border:none;
+    margin:0;
+    user-select: none;
+}
+
+
+.myLi:hover{
+    color:#2caf6f;
+}
+
+.myLi:nth-child(even){
+    background-color: #f7f7f7;
+}
+
+.left{
+    float:left;
+    margin-left:-166px;
+    margin-top:-68px;
+}
+
+.animate__fadeIn{
+    animation-duration:0.3s;
+}

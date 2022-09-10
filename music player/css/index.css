@@ -1,0 +1,84 @@
+
+#container{
+    /* background-color: pink; */
+    width:164px;
+    height:62px;
+    margin:100px auto;
+}
+
+#music{
+    width:164px;
+    height:40px;
+    border-radius:9px;
+    background-color: rgb(238, 238, 238);
+    opacity:0.8;
+    /* margin:150px auto; */
+    position:relative;
+    /* float:right; */
+    z-index:1;
+}
+
+#music #spanContainer{
+    width:100px;
+    height:20px;
+    /* background-color: pink; */
+    position:absolute;
+    right:4px;
+    bottom:11px;
+    user-select:none;
+}
+
+#music #spanContainer span{
+    display:inline-block;
+    vertical-align:middle;
+    margin:0 5px;
+}
+
+#music #showImg{
+    width:40px;
+    height:40px;
+    border-radius:20px;
+    /* background-color: lightblue; */
+    position:absolute;
+    left:10px;
+    top:-20px;
+    background-image:url('../public/albumArt/王靖雯 - 不知所措.jpg');
+    background-size:cover;
+    /* animation:rotateImg 8s infinite linear; */
+    z-index:1;
+}
+
+@keyframes rotateImg{
+    to{
+        transform:rotate(1turn)
+    }
+}
+
+#music #lyrics{
+    width:120px;
+    height:20px;
+    line-height:20px;
+    text-align:center;
+    /* background-color: lightblue; */
+    position:absolute;
+    right:-3px;
+    top:-19px;
+    z-index:-1;
+
+    font-size:4px;
+    color:#928187;
+    user-select:none;
+
+    overflow:hidden;
+}
+
+/* 播放样式 */
+#Switch{
+    border-radius:12px;
+    /* background-color: pink; */
+}
+
+#Switch:hover{
+    background-color:rgb(208, 202, 202);
+    transition:background-color .2s linear;
+}
