@@ -1,0 +1,186 @@
+#circleContainer {
+  width: 200px;
+  height: 200px;
+  margin: 160px auto;
+  position: relative;
+}
+#left {
+  clip: rect(0px 100px 200px 0px);
+  position: absolute;
+  left: 0px;
+  width: 100px;
+  height: 200px;
+  overflow: hidden;
+}
+#right {
+  clip: rect(0px 100px 200px 0px);
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 200px;
+  overflow: hidden;
+}
+.spanSetting {
+  float: right;
+  margin: 26px 15px 0 0;
+}
+.spanSetting:after {
+  content: '';
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('../images/礼物.png');
+  background-size: cover;
+  transform: rotate(-22deg);
+}
+.circle-left {
+  width: 100px;
+  height: 200px;
+  border-radius: 100px 0px 0px 100px;
+  position: absolute;
+  left: 0;
+  transform-origin: 100% 50%;
+}
+.circle-left span {
+  float: right;
+  margin: 26px 15px 0 0;
+}
+.circle-left span:after {
+  content: '';
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('../images/礼物.png');
+  background-size: cover;
+  transform: rotate(-22deg);
+}
+.circle-right {
+  width: 100px;
+  height: 200px;
+  border-radius: 0px 100px 100px 0px;
+  position: absolute;
+  right: 0;
+  transform-origin: 0 50%;
+}
+.circle-right span {
+  float: right;
+  margin: 26px 15px 0 0;
+  float: left;
+  margin: 26px 0 0 15px;
+  transform: rotate(46deg);
+}
+.circle-right span:after {
+  content: '';
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('../images/礼物.png');
+  background-size: cover;
+  transform: rotate(-22deg);
+}
+#circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  position: relative;
+  box-shadow: 0 0 10px 2px #c1e1ee;
+  transform-origin: center;
+}
+#circle .line {
+  z-index: -1;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #db687e transparent;
+  animation: lineRotate 3s linear infinite normal;
+  border-width: 2px 2px 0 0;
+}
+@keyframes lineRotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+#circle1 {
+  background-color: #7fa5bc;
+}
+#circle2 {
+  background-color: #e2e9f1;
+  transform: rotate(-45deg);
+}
+#circle2 span:after {
+  background: url('../images/_jingmeilihe.png');
+}
+#circle3 {
+  background-color: #7fa5bc;
+  transform: rotate(-90deg);
+}
+#circle3 span:after {
+  background: url('../images/gouwu.png');
+}
+#circle4 {
+  background-color: #e2e9f1;
+  transform: rotate(-135deg);
+}
+#circle4 span:after {
+  background: url('../images/lihe.png');
+}
+#circle5 {
+  background-color: #e2e9f1;
+}
+#circle5 span:after {
+  background: url('../images/lihe_1.png');
+}
+#circle6 {
+  background-color: #7fa5bc;
+  transform: rotate(45deg);
+}
+#circle6 span:after {
+  background: url('../images/liwulihelibao.png');
+}
+#circle7 {
+  background-color: #e2e9f1;
+  transform: rotate(90deg);
+}
+#circle7 span:after {
+  background: url('../images/shinshopshishilihe.png');
+}
+#circle8 {
+  background-color: #7fa5bc;
+  transform: rotate(135deg);
+}
+#circle8 span:after {
+  background: url('../images/yingeryongpin_liwu.png');
+}
+#btnCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: pink;
+  position: fixed;
+  margin: 90px;
+  background-color: #4087a7;
+  cursor: pointer;
+}
+#pointer span:after {
+  content: '';
+  z-index: 2;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../images/指针.png');
+  background-size: cover;
+  transform: rotate(-90deg);
+  position: fixed;
+  margin: -116px 0 0 191px;
+}
+[v-cloak] {
+  display: none;
+}

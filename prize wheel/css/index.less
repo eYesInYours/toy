@@ -1,0 +1,223 @@
+@sea:#E2E9F1;
+@lightsea:#7FA5BC;
+@deepsea:#4087A7;
+@lightpink:#F7C9D4;
+
+#circleContainer{
+    width:200px;
+    height:200px;
+    margin: 160px auto;
+    position:relative;
+    // #bac{
+    //     z-index:-10;
+    //     position:absolute;
+    //     right:0;
+    //     top:190px;
+    //     width:60px;
+    //     height:60px;
+    //     border-radius:50px;
+    //     background:url('../images/古风背景.jpg');
+    //     background-size:cover;
+    //     // opacity:0.8;
+    // }
+}
+
+#left {
+    clip: rect(0px 100px 200px 0px);
+    position: absolute;
+    left: 0px;
+    width: 100px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#right {
+    clip: rect(0px 100px 200px 0px);
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.spanSetting{
+    float:right;
+        margin:26px 15px 0 0;
+        &:after{
+            content:'';
+            z-index:2;
+            display:block;
+            width:24px;
+            height:24px;
+            background:url('../images/礼物.png');
+            background-size:cover;
+            transform:rotate(-22deg);
+        }
+}
+
+.circle-left {
+    // display:inline-block;
+    width: 100px;
+    height: 200px;
+    border-radius: 100px 0px 0px 100px;
+    position: absolute;
+    left: 0;
+    transform-origin: 100% 50%;
+    span{
+        .spanSetting();
+    }
+}
+
+.circle-right {
+    width: 100px;
+    height: 200px;
+    border-radius: 0px 100px 100px 0px;
+    position: absolute;
+    right: 0;
+    transform-origin: 0 50%;
+    span{
+        .spanSetting();
+        float:left;
+        margin:26px 0 0 15px;
+        transform:rotate(46deg);
+    }
+}
+
+#circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    position: relative;
+    box-shadow:0 0 10px 2px #c1e1ee;
+    transform-origin:center;
+    // transform:rotate(0deg);
+    .line{
+        z-index:-1;
+        position:absolute;
+        width:200px;
+        height:200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border-style:solid;     
+        border-color:#db687e transparent;
+        animation:lineRotate 3s linear infinite normal;
+        border-width:2px 2px 0 0;
+    }
+}
+
+@keyframes lineRotate{
+    to{
+        transform:rotate(1turn);
+    }
+}
+
+#circle1 {
+    background-color: @lightsea;
+}
+
+#circle2 {
+    background-color: @sea;
+    transform: rotate(-45deg);
+    span{
+        &:after{
+            background:url('../images/_jingmeilihe.png');
+        }
+    }
+}
+
+#circle3 {
+    background-color: @lightsea;
+    transform: rotate(-90deg);
+    span{
+        &:after{
+            background:url('../images/gouwu.png');
+        }
+    }
+}
+
+#circle4 {
+    background-color: @sea;
+    transform: rotate(-135deg);
+    span{
+        &:after{
+            background:url('../images/lihe.png');
+        }
+    }
+}
+
+#circle5 {
+    background-color: @sea;
+    span{
+        &:after{
+            background:url('../images/lihe_1.png');
+        }
+    }
+}
+
+#circle6 {
+    background-color: @lightsea;
+    transform: rotate(45deg);
+    span{
+        &:after{
+            background:url('../images/liwulihelibao.png');
+        }
+    }
+}
+
+#circle7 {
+    background-color: @sea;
+    transform: rotate(90deg);
+    span{
+        &:after{
+            background:url('../images/shinshopshishilihe.png');
+        }
+    }
+}
+
+#circle8 {
+    background-color: @lightsea;
+    transform: rotate(135deg);
+    span{
+        &:after{
+            background:url('../images/yingeryongpin_liwu.png');
+        }
+    }
+}
+
+
+#btnCircle{
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    background-color: pink;
+    position:fixed;
+    margin:90px;
+    background-color:@deepsea;
+    cursor:pointer;
+    // user-select:none;
+}
+
+#pointer{
+    span{
+        &:after{
+            content:'';
+            z-index:2;
+            display:block;
+            width:30px;
+            height:30px;
+            background-image:url('../images/指针.png');
+            background-size:cover;
+            transform:rotate(-90deg);
+            
+            position:fixed;
+            margin:-116px 0 0 191px;
+            // background-color:pink;
+        }
+    }
+}
+
+[v-cloak]{
+    display:none;
+}
